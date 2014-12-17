@@ -56,7 +56,6 @@
 				.name {
 					border-bottom: 2px solid $body-text-color; //#fff;
 					color: $body-text-color;
-					//float: right;
 				}
 
 				@include max-screen($screen-small) {
@@ -65,6 +64,7 @@
 
 				@include max-screen($screen-xsmall) {
 					font-size: 1.75em;
+					float: right;
 				}
 			}
 
@@ -76,7 +76,6 @@
 				@include inline-block;
 
 				font-size: 2em;
-				//color: #fff;
 				color: $body-text-color;
 				padding: 0 10px;
 
@@ -86,6 +85,8 @@
 
 				@include max-screen($screen-xsmall) {
 					font-size: 1.3em;
+					padding: 0;
+					float: right;
 				}
 			}
 		}

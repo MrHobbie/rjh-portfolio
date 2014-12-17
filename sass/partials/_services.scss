@@ -1,8 +1,9 @@
 /* ------------------ SERVICES ------------------ */
 #services {
-	@include min-screen(768px){
 	height: 100vh;
-}
+	@include max-screen($screen-xsmall){
+		height: 100%;
+	}
 }
 
 .service-item {
