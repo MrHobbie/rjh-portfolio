@@ -16,10 +16,10 @@
 
 		width: 100%;
 		height: 100%;
-		background: {
-			image: image-url('noise_lines_@2X.png');
-			repeat: repeat;
-		}
+		// background: {
+		// 	image: image-url('noise_lines_@2X.png');
+		// 	repeat: repeat;
+		// }
 	}
 
 	.hero-content {
@@ -56,7 +56,7 @@
 				.name {
 					border-bottom: 2px solid $body-text-color; //#fff;
 					color: $body-text-color;
-					float: right;
+					//float: right;
 				}
 
 				@include max-screen($screen-small) {

@@ -1,0 +1,30 @@
+I plan to use all 8 boxes like the example here http://jchobsononline.ca/rjh-portfolio/
+
+TITLE: WORKS
+SUB TEXT: See some of my experience including video production, website design, brand partnerships and content published for the radio stations I’ve worked for.
+
+The sub menu can include:
+ALL | DESIGN | SOCIAL MEDIA | VIDEO
+
+Video Example #1
+
+On Hover:
+Title: Arctic Monkeys ‘Do I Wanna Know?’
+Description Text: I filmed, edited and produced Arctic Monkeys performing ‘Do I Wanna Know?’ for CFOX Radio.
+
+Video Link: http://youtu.be/F586JktJyEg
+
+Video Example #2
+
+On Hover:
+Title: The Neighbourhood ‘Sweater Weather’
+Description Text: Partnered with RAM dealerships to incorporate their pickup truck in our performance videos. Performances were filmed in the back of their truck giving a unique twist on bands performing unplugged.
+
+Video Link: http://youtu.be/nTmBN4SKgJE
+
+Social Media Example #1
+
+Image Link: use ‘corus-fb.jpg’
+On Hover:
+Title: Launched & Corus Radio Vancouver Social Media Properties
+Description Text: I launched the all four Corus Radio Stations on to Facebook and Twitter. Their followers on Facebook & Twitter now exceed 500,000 users.

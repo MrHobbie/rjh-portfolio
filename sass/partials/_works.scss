@@ -4,6 +4,9 @@
 /* RECOMMENDED ISOTOPE STYLES
 /* Has been ported into SASS
 /* ---------------------------- */
+#works {
+	height: 100%;
+}
 
 /* Isotope Filtering */
 .isotope-item {
@@ -160,6 +163,7 @@
 
 		a {
 			position: absolute;
+			vertical-align: middle;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -175,7 +179,7 @@
 	}
 
 	.work-item-info {
-		position: absolute;
+		//position: absolute; // removed this to get the overlay text to center
 		left: 0;
 		bottom: 50%;
 		margin-bottom: -2.5em;
@@ -199,17 +203,28 @@
 		}
 
 		h3 {
-			color: #fff;
+			color: $body-text-color; //#fff;  //tweak
+			font-weight: 400;  //tweak
+ 			font-size: 1.25em; // tweak
+			margin-top: 10px;   // tweak
+		}
+		p {
+			color: $body-text-color; //#fff;  //tweak
+			font-weight: 400;  //tweak
+			//letter-spacing: 1px;
+			font-size: .8em; // tweak
+			padding: 0 10px 0 10px;
 		}
 
-		@include screen(548px, 1024px) {
+		@include screen(548px, 1024px){
 			h3 {
-				font-size: 1.3em;
+				font-size: 1em;
 				line-height: 8px;
+				margin-top: 10px;   //tweak
 			}
 
 			p {
-				font-size: 0.8em;
+				font-size: 0.6em;
 			}
 
 		}

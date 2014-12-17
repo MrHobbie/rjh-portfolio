@@ -4,6 +4,23 @@
 /* CONTACT INFO
 /* --------------------- */
 
+/* custom placeholder text color */
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+	color:    #BCC6CC;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:    #BCC6CC;
+	opacity:  1;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:    #BCC6CC;
+	opacity:  1;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+	color:    #BCC6CC;
+}
+/* end placeholder text color */
+
 .contact-info {
 	li {
 		padding-bottom: 30px;
@@ -19,6 +36,7 @@
 
 	p {
 		font-size: 14px;
+		color: $secondary-accent-color;
 	}
 
 	i {

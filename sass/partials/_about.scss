@@ -1,4 +1,9 @@
 /* ------------------ ABOUT ------------------ */
+#about {
+	@include min-screen(768px){
+		height: 100vh;
+	}
+}
 
 .about {
 	position: relative;

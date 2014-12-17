@@ -64,18 +64,19 @@
 	}
 
 	&.nav-text-light {
+		background-color: transparent;
 		> li {
 			> a {
-				color: #AF1E2C; //#fff;
+				color: $heading-text-color;
 
 				&:hover {
-					border-bottom-color: #AF1E2C; //#fff;
+					border-bottom-color: $heading-text-color;
 				}
 			}
 
 			&.active {
 				> a {
-					border-bottom-color: #AF1E2C; // #fff;
+					border-bottom-color: $heading-text-color;
 				}
 			}
 		}
@@ -86,16 +87,16 @@
 	@include border-radius(0);
 
 	&.navbar-light {
-		background-color: #f7f7f7;
+		background-color: #474A4D;  //#f7f7f7;
 		border-bottom: 1px solid #eee;
 
 		.navbar-nav.nav-text-light {
 			> li {
 				> a {
-					color: $heading-text-color;
+					color: #BCC6CC; //$heading-text-color;
 
 					@include max-screen($screen-small - 1px) {
-						color: darken(#fff, 10%);
+						color: #BCC6CC; //darken(#fff, 10%);
 						border-bottom: none;
 						padding-top: 15px;
 						padding-bottom: 15px;
@@ -109,13 +110,13 @@
 					}
 
 					&:hover {
-						border-bottom-color: $heading-text-color;
+						border-bottom-color: #fff; //$heading-text-color;
 					}
 				}
 
 				&.active {
 					> a {
-						border-bottom-color: $heading-text-color;
+						border-bottom-color: #BCC6CC; //$heading-text-color;
 					}
 				}
 			}
@@ -143,7 +144,7 @@
 /* --------------------- */
 
 .btn {
-	@include border-radius(0);
+	//@include border-radius(0);
 	@include transition-property(border-color);
 	@include transition-duration(0.2s);
 	@include transition-timing-function(linear);
@@ -199,11 +200,11 @@
 /* --------------------- */
 
 a {
-	color: $primary-accent-color;
+	color: $section-bg-color-alternate; //$primary-accent-color;
 
 	&:hover,
 	&:focus {
-		color: lighten($primary-accent-color, 10%);
+		color: lighten ($section-bg-color-alternate, 10%);  //($primary-accent-color, 10%);
 		text-decoration: none;
 	}
 }
@@ -224,12 +225,6 @@ a {
 		background-color: $section-bg-most-dark;
 		color: #fafafa;
 	}
-	.about,
-	.services,
-	.works {
-		height: 100vh;
-	}
-
 }
 
 .section-heading {
@@ -242,7 +237,7 @@ a {
 
 	h2 {
 		font-size: 3em;
-		color: $primary-accent-color;
+		color: $heading-text-color; //$primary-accent-color;
 	}
 
 	p {

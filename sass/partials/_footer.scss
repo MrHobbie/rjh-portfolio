@@ -25,12 +25,12 @@
 		display: block;
 		width: 25px;
 		height: 25px;
-		color: #af1e2c; //#fff;
+		color: #fff;
 		text-align: center;
-		background-color: rgba(#e6be8a, 0.3); //rgba(#000, 0.3);
+		background-color: rgba(#000, 0.3);
 
 		&:hover {
-			background-color: rgba(#e6be8a, 0.5);
+			background-color: rgba(#000, 0.5);
 		}
 	}
 }
