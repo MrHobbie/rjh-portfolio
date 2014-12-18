@@ -1,0 +1,15 @@
+# Basics
+name: "Development Notes"
+description: "dev notes description"
+url: "http://localhost:4000"
+paginate: 10
+
+# Conversion
+markdown: kramdown
+permalink: pretty
+#highlighter: pygments
+
+#Collections
+collections:
+  snippets:
+    output: true

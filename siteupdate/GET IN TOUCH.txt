@@ -1,9 +1,0 @@
-GET IN TOUCH
-
-Address
-Vancouver, BC
-Canada
-
-Drop Phone section but keep envelope (instead of person icon) and move Email up:
-Email
-ryanjhobson@gmail.com
