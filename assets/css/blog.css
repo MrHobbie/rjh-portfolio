@@ -93,8 +93,11 @@ hr {
     /*padding-top: 15px;*/
     padding-bottom: 15px;
   }
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #646464;
+}
 .navbar-nav.nav-text-light > li > a:hover {
-    color: #fff;
+    border-bottom-color: #fff; /*color: #fff;*/
     /*padding-top: 15px;*/
     padding-bottom: 15px;
     text-decoration: underline;
