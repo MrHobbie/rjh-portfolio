@@ -1,7 +1,7 @@
 <?php
 
 // hide all basic notices from PHP
-error_reporting(E_ALL ^ E_NOTICE); 
+error_reporting(E_ALL ^ E_NOTICE);
 
 if( isset($_POST['msg-submitted']) ) {
 	$name = $_POST['name'];
@@ -31,19 +31,19 @@ if( isset($_POST['msg-submitted']) ) {
 			$message = stripslashes( trim( $message ) );
 		}
 	}
-		
+
 	if(!isset($hasError)) {
-		
-		$emailTo = 'youremail@domain.com';
+
+		$emailTo = 'ryan13hobson@gmail.com';
 		$subject = 'New Submitted Message From: ' . $name;
 		$body = "Name: $name \n\nEmail: $email \n\nMessage: $message";
 		$headers = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
 		mail($emailTo, $subject, $body, $headers);
-		
+
 		$message = 'Thank you ' . $name . ', your message has been submitted.';
 		$result = true;
-	
+
 	} else {
 
 		$arrMessage = array( $nameError, $emailError, $messageError );

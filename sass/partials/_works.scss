@@ -5,10 +5,7 @@
 /* Has been ported into SASS
 /* ---------------------------- */
 #works {
-	height: 100vh;
-	@include max-screen($screen-xsmall){
-		height: 100%;
-	}
+	height: 100%;
 }
 
 /* Isotope Filtering */
@@ -49,9 +46,9 @@
 /* WORKS GRID
 /* --------------------- */
 
-#works {
-	padding-bottom: 0;
-}
+// #works {
+// 	padding-bottom: 0;
+// }
 
 .work-item-filters {
 	text-align: center;

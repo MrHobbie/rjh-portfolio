@@ -1,0 +1,251 @@
+/* Custom css */
+
+body {
+  padding-top: 70px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dosis", sans-serif;
+  font-weight: 300;
+  color: #30424D;
+  margin-top: 0;
+}
+a {
+  color: #BCC6CC;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: lighten #BCC6CC, 10%;
+  text-decoration: underline;
+}
+hr {
+  height: 1px;
+  color: #bcbcbc;
+  background: #bcbcbc;
+  font-size: 0;
+  border: 0;
+}
+/* NAVIGATION BAR  */
+/*#main-nav {
+  padding-bottom: 10px;
+}*/
+
+.navbar-brand {
+  padding: 10px 15px;
+}
+.navbar-brand img {
+  float:left;
+}
+.navbar {
+  border-radius: 0;
+  /*margin-bottom: 5px;*/
+}
+.navbar-nav {
+  padding: 15px 0;
+}
+.navbar-nav > li {
+  margin: 0 10px;
+}
+.navbar-nav > li > a {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  font-size: 12px;
+  color: #30424D;
+  font-weight: 700;
+}
+.navbar-nav.nav-text-light > li > a {
+  color: #1f3553;
+}
+.navbar-nav.nav-text-light > li > a:hover{
+  border-bottom-color: #30424D;
+  /*background-color: #646464;*/
+}
+.navbar-nav.nav-text-light > li.active > a {
+  border-bottom-color: #30424D;
+}
+.navbar-toggle {
+  /*border-color: ##646464;*/
+  background-color: #30424D;
+}
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background-color: #30424D;
+}
+.navbar-fixed-top {
+  background-color: #fff;
+}
+/* navbar media queries */
+
+@media screen and (max-width: 767px) {
+.navbar-fixed-top {
+  padding-bottom: 10px;
+}
+.navbar-nav.nav-text-light > li > a {
+    color: #e6e6e6;
+    border-bottom: none;
+    /*padding-top: 15px;*/
+    padding-bottom: 15px;
+  }
+.navbar-nav.nav-text-light > li > a:hover {
+    color: #fff;
+    /*padding-top: 15px;*/
+    padding-bottom: 15px;
+    text-decoration: underline;
+  }
+  .navbar-collapse {
+    background-color: #646464;
+  }
+}
+/* page header */
+.page-header {
+  margin: 0 0 0 0;
+  text-align: center;
+}
+.page-header h1 {
+  color: #30424D;
+  margin: 0 0 0 0;
+  font-size: 3.0em;
+}
+.page-header h2 {
+  color: #bbb;
+  margin: 0 0 0 0;
+  font-size: 2.0em;
+}
+@media screen and (max-width: 480px) {
+  .page-header h1 {
+    font-size: 2.5em;
+  }
+  .page-header h2 {
+    font-size: 1.5em;
+  }
+  }
+/* SOCIAL NETWORK */
+
+#footer {
+  text-align: center;
+  background-color: #fff;
+}
+.social-icon li {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding-top: 15px;
+}
+.social-icon li a {
+  border-radius: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 33px;
+  text-align: center;
+  color: #BCC6CC;
+  border: 2px solid #BCC6CC;
+}
+.social-icon li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+@media screen and (max-width: 480px) {
+  .social-icon {
+    width: 100%;
+    text-align: center;
+  }
+  /*.social-icon li {
+    margin-left: 20px;
+    margin-right: 20px;
+  }*/
+}
+/*
+* Posts and pages
+*
+* Each post is wrapped in `.post` and is used on default and post layouts. Each
+* page is wrapped in `.page` and is only used on the page layout.
+*/
+
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: #303030;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h4 {
+  margin-top: 0;
+  font-weight: 400;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: #090d8a;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: #090d8a;
+}
+/* Block quotes */
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 90px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #7a7a7a;
+}
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+  max-width: 500px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1.45;
+  position: relative;
+  color: #383838;
+}
+@media screen and (max-width: 480px) {
+    blockquote:before {
+      font-size: 50px;
+      left: 0;
+    }
+    blockquote {
+      font-size: 14px;
+    }
+}
