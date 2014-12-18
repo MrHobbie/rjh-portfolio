@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+{% include post-head.html %}
 
 <body>
 
@@ -22,7 +22,7 @@
       </div>
       <nav class="navbar-collapse collapse" id="main-nav" role="navigation">
         <ul class="nav navbar-nav nav-text-light">
-          <li class="active"><a href="/index.html">BLOG HOME</a>
+          <li class="active"><a href="../../../../index.html">BLOG HOME</a>
           </li>
         </ul>
       </nav>
@@ -36,7 +36,6 @@
         <article class="post">
           {{ content }}
         </article>
-        {% include related-posts.html %}
         {% include comments.html %}
       </div>
     </div>
