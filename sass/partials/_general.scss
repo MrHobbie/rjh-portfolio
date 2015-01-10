@@ -9,6 +9,9 @@
 /* --------------------- */
 /* NAVIGATION BAR
 /* --------------------- */
+.navbar {
+	margin-bottom: 0;
+}
 
 .navbar-brand {
 	padding: 10px 15px;
@@ -44,11 +47,11 @@
 			padding-bottom: 5px;
 			border-bottom: 2px solid rgba(#000, 0);
 			font-size: 12px;
-			color: $heading-text-color;
+			color: $navbar-link;
 			font-weight: 700;
 
 			&:hover, &:focus {
-				border-bottom: 2px solid $heading-text-color;
+				border-bottom: 2px solid $navbar-link-border;
 				padding-bottom: 0;
 				background-color: transparent;
 			}
@@ -56,7 +59,7 @@
 
 		&.active {
 			> a {
-				border-bottom: 2px solid $heading-text-color;
+				border-bottom: 2px solid $navbar-link-active;
 				padding-bottom: 0;
 				background-color: transparent;
 			}
@@ -67,16 +70,16 @@
 		background-color: transparent;
 		> li {
 			> a {
-				color: $heading-text-color;
+				color: $navbar-link;
 
 				&:hover {
-					border-bottom-color: $heading-text-color;
+					border-bottom-color: $navbar-link-hover;
 				}
 			}
 
 			&.active {
 				> a {
-					border-bottom-color: $heading-text-color;
+					border-bottom-color: $navbar-link-active;
 				}
 			}
 		}
@@ -87,36 +90,35 @@
 	@include border-radius(0);
 
 	&.navbar-light {
-		background-color: #474A4D;  //#f7f7f7;
-		border-bottom: 1px solid #eee;
+		background-color: $navbar-alt-background;
+		//border-bottom: 1px solid $navbar-alt-link-border;
 
 		.navbar-nav.nav-text-light {
 			> li {
 				> a {
-					color: #BCC6CC; //$heading-text-color;
+					color: $navbar-alt-link;
 
 					@include max-screen($screen-small - 1px) {
-						color: #BCC6CC; //darken(#fff, 10%);
 						border-bottom: none;
 						padding-top: 15px;
 						padding-bottom: 15px;
 
 						&:hover {
 							color: #fff;
+							text-decoration: none;
 							padding-top: 15px;
 							padding-bottom: 15px;
-							text-decoration: underline;
 						}
 					}
 
 					&:hover {
-						border-bottom-color: #fff; //$heading-text-color;
+						border-bottom-color: $navbar-alt-link-hover;
 					}
 				}
 
 				&.active {
 					> a {
-						border-bottom-color: #BCC6CC; //$heading-text-color;
+						border-bottom-color: $navbar-alt-link-active;
 					}
 				}
 			}
@@ -125,16 +127,16 @@
 }
 
 .navbar-toggle {
-	background-color: $heading-text-color;
+	background-color: $navbar-toggle-background;
 
 	.icon-bar {
-		background-color: #fff;
+		background-color: $navbar-toggle-iconbar;
 	}
 }
 
 @include max-screen($screen-small - 1px) {
 	.navbar-collapse {
-		background-color: #646464;
+		background-color: $navbar-collapse-background;
 	}
 }
 
@@ -163,25 +165,27 @@
 }
 
 .btn-info {
-	background-color: $secondary-accent-color;
-	border-color: $secondary-accent-color;
+	color: $btn-info-text;
+	background-color: $btn-info-background;
+	border-color: $btn-info-border;
 
 	&:hover, &:focus, &:active, &.active {
-		background-color: $secondary-accent-color;
-		border-color: darken($secondary-accent-color, 5%);
+		background-color: $btn-info-background;
+		border-color: darken($btn-info-border, 5%);
 	}
 }
 
 .btn-primary {
-	background-color: $primary-accent-color;
-	border-color: $primary-accent-color;
+	color: $btn-primary-text;
+	background-color: $btn-primary-background;
+	border-color: $btn-primary-border;
 
 	&:hover, &:focus, &:active, &.active {
-		background-color: $primary-accent-color;
-		border-color: darken($primary-accent-color, 5%);
+		background-color: $btn-primary-background;
+		border-color: darken($btn-primary-border, 5%);
 	}
 }
-
+/*
 .btn-primary.disabled,
 .btn-primary[disabled] {
 	background-color: lighten($primary-accent-color, 10%);
@@ -193,6 +197,7 @@
 	}
 
 }
+*/
 
 
 /* --------------------- */
@@ -200,11 +205,11 @@
 /* --------------------- */
 
 a {
-	color: $section-bg-color-alternate; //$primary-accent-color;
+	color: $link; //$primary-accent-color;
 
 	&:hover,
 	&:focus {
-		color: lighten ($section-bg-color-alternate, 10%);  //($primary-accent-color, 10%);
+		color: $link-hover;  //($primary-accent-color, 10%);
 		text-decoration: none;
 	}
 }
@@ -214,17 +219,7 @@ a {
 /* --------------------- */
 
 .section {
-	background-color: $section-bg-color-default;
-	padding: 70px 0;
-
-	&.darker {
-		background-color: $section-bg-color-alternate;
-	}
-
-	&.most-dark {
-		background-color: $section-bg-most-dark;
-		color: #fafafa;
-	}
+	padding: 50px 0;  // adjusted from 70px;
 }
 
 .section-heading {
@@ -237,25 +232,27 @@ a {
 
 	h2 {
 		font-size: 3em;
-		color: $heading-text-color; //$primary-accent-color;
+		color: $section-heading;
 	}
 
 	p {
 		font-size: 1.5em;
-		color: $subheading-text-color;
+		color: $section-subheading;
 	}
 
 	hr {
 		@include inline-block;;
 
 		width: 100px;
-		border-top: 1px solid $heading-text-color;
+		border-top: 1px solid $section-heading;
 	}
 }
 
 .section-content {
+	width: 100%;
+	background-color: $section-content-background;
 	h3 {
-		color: $subheading-text-color;
+		color: $section-content;
 	}
 
 	.sub-section {
@@ -288,19 +285,6 @@ a {
 /* 3rd PARTY STYLES
 /* --------------------- */
 
-.parallax {
-	background-attachment: fixed !important;
-	background-size: cover;
-
-	@include max-screen(1024px) {
-		background: {
-			attachment: scroll !important;
-			position: initial !important;
-			repeat: no-repeat !important;
-		}
-	}
-}
-
 .wow {
 	visibility: hidden;
 }
@@ -319,18 +303,18 @@ body {
 		font-weight: normal;
 		font-family: $secondary-font-family;
 		text-shadow: none;
-		color: $body-text-color;
+		color: $jpreloader-percent;
 	}
 
 	#jpreOverlay {
-		background-color: #fafafa;
+		background-color: $jpreloader-overlay-background;
 	}
 
 	#jpreBar {
 		@include box-shadow(none);
 
 		background-image: none;
-		background-color: $body-text-color;
+		background-color: $jpreloader-bar-background;
 	}
 
 

@@ -3,21 +3,62 @@
 /* --------------------- */
 /* CONTACT INFO
 /* --------------------- */
+#contact {
+	height: 100vh;
+}
+
+.contact {
+	position: relative;
+	text-align: center;
+
+	.section-heading {
+		background-color: $contact-section-background;
+		margin-bottom: 0;
+		right: 0;
+		left: 0;
+		a {
+			text-decoration: underline;
+			bottom-border: $link;
+		&:hover {
+			color: darken($link, 20%);
+		}
+		}
+		h2 {
+			margin-top: 15px;
+		}
+		p {
+			font-size: 1.25em;
+		}
+	}
+		.section-content {
+			padding-top: 10px;
+		}
+}
+@include max-screen($screen-xsmall) {
+	.contact {
+		padding-bottom: 0;
+	}
+
+}
+
+.form-control {
+	color: $placeholder-text;
+}
 
 /* custom placeholder text color */
 .form-control::-webkit-input-placeholder { /* WebKit browsers */
-	color:    #BCC6CC;
+	color:    $placeholder-text;
 }
 .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-	color:    #BCC6CC;
+	color:    $placeholder-text;
 	opacity:  1;
 }
 .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-	color:    #BCC6CC;
+	color:    $placeholder-text;
 	opacity:  1;
 }
 .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
-	color:    #BCC6CC;
+	color:    $placeholder-text;
 }
 /* end placeholder text color */
 
@@ -27,7 +68,7 @@
 	}
 
 	h3, i {
-		color: $heading-text-color;
+		color: $contact-info-heading;
 	}
 
 	h3, p {
@@ -35,12 +76,12 @@
 	}
 
 	p {
-		font-size: 14px;
-		color: $secondary-accent-color;
+		font-size: 1em;
+		color: $contact-info-subheading;
 	}
 
 	i {
-		font-size: 40px;
+		font-size: 2.5em;
 	}
 
 	@include max-screen($screen-small) {
@@ -81,7 +122,7 @@
 		margin-bottom: 7px;
 		min-height: 3em;
 		border: none;
-		background-color: darken($section-bg-color-default, 3%);
+		background-color: $contact-form-background; //darken($section-bg-color-default, 3%);
 	}
 
 	.form-group {
