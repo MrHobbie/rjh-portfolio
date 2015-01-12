@@ -13,7 +13,7 @@ body {
   line-height: 1.6;
 }
 body.fullscreen-image-background {
-  background-image: url('../img/sliders/rhob-site-header.jpg?1418850386');
+  background-image: url('../img/sliders/rhob-site-header.jpg?1419448532');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -350,11 +350,11 @@ body #jpreBar {
 	Supersized - Fullscreen Slideshow jQuery Plugin
 	Version : 3.2.7
 	Site	: www.buildinternet.com/project/supersized
-
+	
 	Author	: Sam Dunn
 	Company : One Mighty Roar (www.onemightyroar.com)
 	License : MIT License / GPL License
-
+	
 */
 * {
   margin: 0;
