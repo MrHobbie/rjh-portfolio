@@ -22,5 +22,17 @@ $( document ).ready(function() {
   $(window).resize( function() {
     fixedFooter();
   });
+});
+//for the new collapsed menu
+$(document).ready(function() {
+  var sideslider = $('[data-toggle=collapse-side]');
+  var sel = sideslider.attr('data-target');
+  sideslider.click(function(event){
+    $(sel).toggleClass('in');
+  });
+});
+// hide collapsible menu
 
+$('.navbar-nav li a').click( function() {
+  $('.side-collapse').toggleClass('in');
 });

@@ -90,6 +90,10 @@
       display: block;
       padding: 15px;
       color: $works-filter-link-color;
+      @include max-screen($screen-small) {
+        padding: 5px;
+        font-size: 12px;
+      }
 
       &:hover,
       &.active {
@@ -252,11 +256,23 @@
       padding: 0 10px;
 
     }
-    @include screen(548px, 1024px) {
+    @include max-screen($screen-small) {
       h3 {
         font-size: 1em;
         line-height: 8px;
-        margin-top: 10px;
+        margin: 5px 0 5px 0;
+        //tweak
+
+      }
+      p {
+        font-size: 0.6em;
+      }
+    }
+    @include screen(692px, $screen-medium) {
+      h3 {
+        font-size: 1em;
+        line-height: 8px;
+        margin: 5px 0 5px 0;
         //tweak
 
       }
@@ -275,9 +291,9 @@ button.mfp-close,
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close,
 .mfp-close {
-  font-size: 23px;
+  font-size: 30px;
   width: 36px;
-  background: rgba(#000, 0.5);
+  background: #000; //rgba(#000, 0.5);
   height: 36px;
   top: 0;
   right: 0;
@@ -286,7 +302,8 @@ button.mfp-close,
   display: inline;
   font-family: inherit;
   line-height: 1;
-
+//add
+  color: $primaryColor;
 }
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: pointer;

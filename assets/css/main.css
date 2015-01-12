@@ -166,6 +166,21 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #03A9F4;
   }
 }
+@media screen and (max-width: 767px) {
+  .side-collapse {
+    top: 50px;
+    bottom: 0;
+    left: 0px;
+    width: 200px;
+    position: fixed;
+    overflow: hidden;
+    transition: width .4s;
+  }
+
+  .side-collapse.in {
+    width: 0;
+  }
+}
 /* --------------------- */
 /* BUTTONS
 /* --------------------- */
@@ -7813,6 +7828,12 @@ blockquote p {
   padding: 15px;
   color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+  .work-item-filters li a {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
 .work-item-filters li a:hover, .work-item-filters li a.active {
   text-decoration: none;
   outline: none;
@@ -7964,11 +7985,21 @@ blockquote p {
   font-size: 0.8em;
   padding: 0 10px;
 }
-@media screen and (min-width: 548px) and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .work-item-list .work-item-info h3 {
     font-size: 1em;
     line-height: 8px;
-    margin-top: 10px;
+    margin: 5px 0 5px 0;
+  }
+  .work-item-list .work-item-info p {
+    font-size: 0.6em;
+  }
+}
+@media screen and (min-width: 692px) and (max-width: 992px) {
+  .work-item-list .work-item-info h3 {
+    font-size: 1em;
+    line-height: 8px;
+    margin: 5px 0 5px 0;
   }
   .work-item-list .work-item-info p {
     font-size: 0.6em;
@@ -7982,9 +8013,9 @@ button.mfp-close,
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close,
 .mfp-close {
-  font-size: 23px;
+  font-size: 30px;
   width: 36px;
-  background: rgba(0, 0, 0, 0.5);
+  background: #000;
   height: 36px;
   top: 0;
   right: 0;
@@ -7993,6 +8024,7 @@ button.mfp-close,
   display: inline;
   font-family: inherit;
   line-height: 1;
+  color: #03A9F4;
 }
 
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {

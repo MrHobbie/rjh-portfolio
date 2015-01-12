@@ -66,13 +66,6 @@ function setFixedFooter() {
 		//$('.navbar-brand img').attr('src', 'assets/img/loop-logo-white.png');
 	}
 
-	// hide collapsible menu
-	$('.navbar-nav li a').click( function() {
-		if($(this).parents('.navbar-collapse.collapse').hasClass('in')) {
-			$('#main-nav').collapse('hide');
-		}
-	});
-
 	$('#main-nav').localScroll({
 		duration: 1000,
 		easing: 'easeInOutExpo'
@@ -82,6 +75,23 @@ function setFixedFooter() {
 		duration: 1000,
 		easing: 'easeInOutExpo'
 	});
+
+	//for the new collapsed menu
+//	$(document).ready(function() {
+		var sideslider = $('[data-toggle=collapse-side]');
+		var sel = sideslider.attr('data-target');
+		var sel2 = sideslider.attr('data-target-2');
+		sideslider.click(function(event){
+			$(sel).toggleClass('in');
+			$(sel2).toggleClass('out');
+		});
+//	});
+
+// hide collapsible menu
+
+$('.navbar-nav li a').click( function() {
+	$('.side-collapse').toggleClass('in');
+});
 
 
 	/*----------------------/
@@ -310,7 +320,44 @@ function setFixedFooter() {
 		}
 
 	});
+// some code from the magnific popup site
+//$(document).ready(function() {
 
+	$('.image-popup-vertical-fit').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		mainClass: 'mfp-img-mobile',
+		image: {
+			verticalFit: true
+		}
+
+	});
+
+	$('.image-popup-fit-width').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		image: {
+			verticalFit: false
+		}
+	});
+
+	$('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+
+//});
+// end of code from magnific popup site
 
 	/*----------------------/
 	/* SOCIAL NETWORK

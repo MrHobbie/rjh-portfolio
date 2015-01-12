@@ -139,7 +139,22 @@
 		background-color: $navbar-collapse-background;
 	}
 }
+// for the new collapsed menu
+@media screen and (max-width: 767px) {
 
+	.side-collapse {
+		top:50px;
+		bottom:0;
+		left:0px;
+		width:200px;
+		position:fixed;
+		overflow:hidden;
+		transition:width .4s;
+	}
+	.side-collapse.in {
+		width:0;
+	}
+}
 
 /* --------------------- */
 /* BUTTONS
