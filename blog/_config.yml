@@ -1,9 +1,0 @@
-# Basics
-name: "Blog"
-description: "by Ryan J. Hobson"
-url: ""
-paginate: 10
-
-# Conversion
-markdown: kramdown
-permalink: pretty
