@@ -1,9 +1,16 @@
-/* ------------------ ABOUT ------------------ */
-#about {
-  height: 100%;
+/* ------------------ ABOUT ------------------
+   Includes the new BLOG page for styling purposes */
 
+#about,
+#blog
+  {
+  height: 100%;
+  display: block;
 }
-.about {
+
+.about,
+.blog
+{
   position: relative;
   text-align: center;
 
@@ -24,6 +31,9 @@
   }
 
 }
+.about-subheading {
+  color: $accentColor;
+}
 /* --------------------- */
 /* SOCIAL NETWORK
 /* --------------------- */
@@ -33,6 +43,11 @@
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 30px;
+    @include max-screen($screen-xsmall) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
 
     a {
       @include border-radius(50%);
@@ -50,6 +65,13 @@
       color: $social-icons;
       border: 2px solid $social-icons-border;
       box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.26);
+      @include max-screen($screen-xsmall) {
+        width: 45px;
+        height: 45px;
+        font-size: 23px;
+        line-height: 42px;
+      }
+
 
       &:hover {
         background-color: $social-icons-hover-background;
@@ -61,10 +83,126 @@
   @include max-screen($screen-xsmall) {
     width: 100%;
     text-align: center;
+  }
+}
+/*
+* Posts and pages
+*
+* Each post is wrapped in `.post` and is used on default and post layouts. Each
+* page is wrapped in `.page` and is only used on the page layout.
+*/
+#blog  p {
+  @include max-screen($screen-xsmall) {
+    font-size: 14px;
+  }
+}
 
-    li {
-      margin-left: 20px;
-      margin-right: 20px;
+.post-title {
+  color: $primaryTextColor;
+  text-align: left;
+  @include max-screen($screen-small) {
+    padding: 0 32px 0 32px;
+  }
+}
+.post-subtitle {
+  color: $secondaryTextColor;
+  text-align: left;
+  @include max-screen($screen-small) {
+    padding: 0 32px 0 32px;
+  }
+}
+.post-link {
+  text-align:left;
+  p {
+    @include max-screen($screen-small) {
+      padding: 0 32px 0 32px;
     }
+  }
+}
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  color: $primaryTextColor;
+}
+.post-container {
+  margin-top: 70px;
+}
+#blog hr {
+  border-top: 1px solid $accentColor;
+}
+#blog-footer {
+  background-color: #fff;
+}
+
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h4 {
+  margin-top: 0;
+  font-weight: 400;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+.related-posts li a:hover {
+  color: #090d8a;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: #090d8a;
+}
+/* Block quotes */
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 4em;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: $accentColor;
+}
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 2em;
+  font-style: italic;
+  max-width: 500px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1;  //1.45;
+  position: relative;
+  color: $secondaryTextColor;
+  border-left: none;  //override the bootstrap default
+  p {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  blockquote:before {
+    font-size: 50px;
+    line-height: 1.75;
+    left: 0;
+  }
+  blockquote {
+    font-size: 16px;
   }
 }

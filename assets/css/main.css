@@ -336,116 +336,6 @@ body #jpreBar {
   color: #d2322d;
 }
 
-/*
-
-	Supersized - Fullscreen Slideshow jQuery Plugin
-	Version : 3.2.7
-	Site	: www.buildinternet.com/project/supersized
-	
-	Author	: Sam Dunn
-	Company : One Mighty Roar (www.onemightyroar.com)
-	License : MIT License / GPL License
-	
-*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #111;
-  height: 100%;
-}
-
-img {
-  border: none;
-}
-
-#supersized-loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 0;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
-  text-indent: -999em;
-  background: url(../img/progress.gif) no-repeat center center;
-}
-
-#supersized {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  z-index: -999;
-  height: 100%;
-  width: 100%;
-}
-
-#supersized img {
-  width: auto;
-  height: auto;
-  position: relative;
-  display: none;
-  outline: none;
-  border: none;
-}
-
-#supersized.speed img {
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: -moz-crisp-edges;
-}
-
-/*Speed*/
-#supersized.quality img {
-  -ms-interpolation-mode: bicubic;
-  image-rendering: optimizeQuality;
-}
-
-/*Quality*/
-#supersized li {
-  display: block;
-  list-style: none;
-  z-index: -30;
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
-}
-
-#supersized a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-#supersized li.prevslide {
-  z-index: -20;
-}
-
-#supersized li.activeslide {
-  z-index: -10;
-}
-
-#supersized li.image-loading {
-  background: #111 url(../img/progress.gif) no-repeat center center;
-  width: 100%;
-  height: 100%;
-}
-
-#supersized li.image-loading img {
-  visibility: hidden;
-}
-
-#supersized li.prevslide img, #supersized li.activeslide img {
-  display: inline;
-}
-
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -7482,29 +7372,40 @@ img.mfp-img {
   animation-name: fadeOut;
 }
 
-/* ------------------ ABOUT ------------------ */
-#about {
+/* ------------------ ABOUT ------------------
+   Includes the new BLOG page for styling purposes */
+#about,
+#blog {
   height: 100%;
+  display: block;
 }
 
-.about {
+.about,
+.blog {
   position: relative;
   text-align: center;
 }
-.about .section-heading {
+.about .section-heading,
+.blog .section-heading {
   background-color: #03A9F4;
   margin-bottom: 5px;
   right: 0;
   left: 0;
 }
-.about h2 {
+.about h2,
+.blog h2 {
   margin-top: 15px;
 }
-.about .section-content {
+.about .section-content,
+.blog .section-content {
   font-weight: 300;
   text-align: left;
   padding: 10px 10px 10px 10px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.about-subheading {
+  color: #607D8B;
 }
 
 /* --------------------- */
@@ -7514,6 +7415,12 @@ img.mfp-img {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 30px;
+}
+@media screen and (max-width: 480px) {
+  .social-icon li {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .social-icon li a {
   -moz-border-radius: 50%;
@@ -7542,6 +7449,14 @@ img.mfp-img {
   border: 2px solid #607D8B;
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.26);
 }
+@media screen and (max-width: 480px) {
+  .social-icon li a {
+    width: 45px;
+    height: 45px;
+    font-size: 23px;
+    line-height: 42px;
+  }
+}
 .social-icon li a:hover {
   background-color: #FFFFFF;
   color: #607D8B;
@@ -7551,12 +7466,147 @@ img.mfp-img {
     width: 100%;
     text-align: center;
   }
-  .social-icon li {
-    margin-left: 20px;
-    margin-right: 20px;
+}
+
+/*
+* Posts and pages
+*
+* Each post is wrapped in `.post` and is used on default and post layouts. Each
+* page is wrapped in `.page` and is only used on the page layout.
+*/
+@media screen and (max-width: 480px) {
+  #blog p {
+    font-size: 14px;
   }
 }
 
+.post-title {
+  color: #212121;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .post-title {
+    padding: 0 32px 0 32px;
+  }
+}
+
+.post-subtitle {
+  color: #727272;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .post-subtitle {
+    padding: 0 32px 0 32px;
+  }
+}
+
+.post-link {
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .post-link p {
+    padding: 0 32px 0 32px;
+  }
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  color: #212121;
+}
+
+.post-container {
+  margin-top: 70px;
+}
+
+#blog hr {
+  border-top: 1px solid #607D8B;
+}
+
+#blog-footer {
+  background-color: #fff;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+}
+
+/* Related posts */
+.related {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+
+.related-posts h4 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.related-posts li small {
+  font-size: 75%;
+  color: #999;
+}
+
+.related-posts li a:hover {
+  color: #090d8a;
+  text-decoration: none;
+}
+
+.related-posts li a:hover small {
+  color: #090d8a;
+}
+
+/* Block quotes */
+blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 4em;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  color: #607D8B;
+}
+
+blockquote {
+  font-family: Georgia, serif;
+  font-size: 2em;
+  font-style: italic;
+  max-width: 500px;
+  margin: 0.25em 0;
+  padding: 0.25em 40px;
+  line-height: 1;
+  position: relative;
+  color: #727272;
+  border-left: none;
+}
+blockquote p {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  blockquote:before {
+    font-size: 50px;
+    line-height: 1.75;
+    left: 0;
+  }
+
+  blockquote {
+    font-size: 16px;
+  }
+}
 /* ------------------ SERVICES ------------------ */
 #services {
   height: 100%;
@@ -7777,6 +7827,7 @@ img.mfp-img {
 .work-item-list {
   margin-bottom: 0;
   width: 101%;
+  padding-left: 0;
 }
 .work-item-list li {
   padding: 0;
@@ -7843,6 +7894,7 @@ img.mfp-img {
   -o-transition-timing-function: linear;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
+  border: 1px solid #607D8B;
   position: absolute;
   left: 0;
   top: 0;

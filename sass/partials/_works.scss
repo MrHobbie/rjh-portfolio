@@ -109,6 +109,7 @@
 .work-item-list {
   margin-bottom: 0;
   width: 101%;
+  padding-left: 0;
 
   li {
     padding: 0;
@@ -169,6 +170,7 @@
     @include transition-property(opacity);
     @include transition-duration(0.2s);
     @include transition-timing-function(linear);
+    border: 1px solid $accentColor;
 
     position: absolute;
     left: 0;

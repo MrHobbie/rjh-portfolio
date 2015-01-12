@@ -13,6 +13,22 @@ jQuery( function($){
 	/*----------------------/
 	/* MAIN NAVIGATION
 	/*---------------------*/
+// fixed footer on small screens is an scroll issue.
+function removeFixedFooter() {
+	if( $(window).width() < 480) {
+		setNoFixedFooter();
+	} else {
+		setFixedFooter();
+	}
+}
+
+function setNoFixedFooter() {
+	$('#blog-footer').removeClass('navbar-fixed-bottom');
+}
+
+function setFixedFooter() {
+	$('#blog-footer').addClass('navbar-fixed-bottom');
+}
 
 	$(window).on('scroll', function(){
 		if( $(window).width() > 1024 ) {
@@ -36,6 +52,7 @@ jQuery( function($){
 
 	$(window).resize( function() {
 		toggleNavbar();
+		removeFixedFooter();
 	});
 
 	/* navbar setting functions */
